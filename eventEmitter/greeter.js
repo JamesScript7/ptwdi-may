@@ -42,10 +42,10 @@ function logic(obj) {
 
 Guest.prototype = new EventEmitter();
 
-var first = new Guest({'name': 'James', 'age': 30});
-var second = new Guest({'name': 'fort', 'age': 20});
+var guest1 = new Guest({'name': 'James', 'age': 30});
+var guest2 = new Guest({'name': 'fort', 'age': 20});
 
-first.on('ring', logic);
+Guest.prototype.on('ring', logic);
 
-first.pressBell();
-second.pressBell();
+guest1.pressBell();
+guest2.pressBell();

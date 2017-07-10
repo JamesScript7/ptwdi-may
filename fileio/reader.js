@@ -1,4 +1,6 @@
 var fs = require('fs');
+var path = require('path');
+var scriptName = path.basename(__filename);
 
 //fs.readFile('./copy.txt', 'utf-8', function(err, data) {
 //  if (err) throw err;
@@ -23,6 +25,7 @@ fs.readFile('./wrote.txt', 'utf-8', function(err, data) {
 //});
 
 fs.readdir('.', function(err, files) {
+  //You'll get back an array.
   console.log('5 The files in this directory are: ' + files);
   console.log('6 The first file is: ' + files[0]);
 });
@@ -50,4 +53,3 @@ fs.rename('wrote.txt', 'new_wrote.js', function(err) {
   if (err) throw err;
   console.log('9 File was RENAMED!');
 });
-
