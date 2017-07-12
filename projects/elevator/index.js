@@ -92,7 +92,7 @@ function downFunction() {
       } else {
 
         setTimeout(function(){
-          console.log('Congratulations! There are: ' + passengers.length + ' passengers left to take this horribly inefficient elevator');
+          console.log('Congratulations! There are: ' + passengers.length + ' passengers left to take this extremely inefficient elevator');
         },1000);
 
       }

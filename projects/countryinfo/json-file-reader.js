@@ -1,6 +1,6 @@
 'use strict';
 
-function reader() {
+function reader(fileName, callback) {
   console.log("Hello from the reader!");
 }
 

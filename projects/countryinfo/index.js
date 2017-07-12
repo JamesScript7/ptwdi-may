@@ -1,18 +1,29 @@
 'use strict';
 
 const fs = require('fs');
+
+//Module Example:
 //const jsonReader = require('./json-file-reader.js');
 
-//process.argv.forEach(val, i) => {
-//  console.log(`${i}: ${val}`);
-//}
+//The name of the country taken from the command line.
+var input = process.argv[2];
+var file = './countries.json';
 
-fs.readFile('./countries.json', 'utf-8',function(err, data){
-  var countries = JSON.parse(data);
+fs.readFile(file, function(err, data){
+  if (err) throw err;
 
-  //User will input the Country name:
-  var input = process.argv[2];
+  //Remember: Array of OBJECTS
+  var country = JSON.parse(data);
 
-  console.log(countries[0].name);
-  //You have to iterate through the list
+  country.forEach((obj)=>{
+
+    if (input === obj.name) {
+      for (var key in obj) {
+        console.log(`${key.charAt(0).toUpperCase() + key.slice(1)}: ${obj[key]}`);
+      }
+    }
+
+  });
+
+
 });
