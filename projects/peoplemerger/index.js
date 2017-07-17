@@ -22,7 +22,7 @@ fs.readFile(file1, 'utf-8', function(err, data1) {
     //1. If you wanted a customized format:
 
     sortedArr.forEach((val, i) => {
-      var formatted = `${i + 1}. ${val}\n`;
+      let formatted = `${i + 1}. ${val}\n`;
       fs.appendFile(completeFile, formatted, function(err) {
         if (err) throw err;
       });
@@ -35,6 +35,7 @@ fs.readFile(file1, 'utf-8', function(err, data1) {
     //   if (err) throw err;
     //   console.log('File written!');
     // });
+
 
     //fs.readFile for data2
     });
