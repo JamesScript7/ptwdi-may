@@ -24,6 +24,12 @@
       <% } %>
     </ul>
 
+    <ul>
+      <% students.forEach((student) => { %>
+        <li><%= student %></li>
+      <% }) %>
+    </ul>
+
     <a href="/about">About this class</a>
 
     <form action='/submit' method='POST'>
