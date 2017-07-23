@@ -5,6 +5,7 @@ const app = express();
 const parser = require('body-parser');
 
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());

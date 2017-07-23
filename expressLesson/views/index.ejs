@@ -2,6 +2,7 @@
 
 <html>
   <head>
+    <meta charset="utf-8">
     <title>
       Home
     </title>
@@ -11,12 +12,16 @@
         padding: 20px;
         border: 1px solid black;
       }
-
     </style>
+
+    <!-- express.static('public') example -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
 
   <body>
-    <h1><%= title %></h1>
+    <!-- Moved the header into a global partial -->
+    <!-- <h1><%=// title %></h1> -->
+    <% include ./global/header %>
 
     <ul>
       <% for (var i = 0; i < students.length; i++) { %>
@@ -27,15 +32,18 @@
     <ul>
       <% students.forEach((student) => { %>
         <!-- <li><%=// student %></li> -->
-        <% include ./partials/students.ejs %>
+        <% include ./partials/students %>
       <% }) %>
     </ul>
-
-    <a href="/about">About this class</a>
 
     <form action='/submit' method='POST'>
       <input type="text" name="color">
       <input type="submit">
     </form>
+
+    <!-- Moved the footer into a global partial -->
+    <!-- <a href="/about">About this class</a> -->
+    <% include ./global/footer %>
+
   </body>
 </html>
