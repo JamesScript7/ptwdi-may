@@ -7,12 +7,12 @@
       Home
     </title>
 
-    <style>
+    <!-- /*<style>
       input {
         padding: 20px;
         border: 1px solid black;
       }
-    </style>
+    </style>*/ -->
 
     <!-- express.static('public') example -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -23,16 +23,18 @@
     <!-- <h1><%=// title %></h1> -->
     <% include ./global/header %>
 
-    <ul>
-      <% for (var i = 0; i < students.length; i++) { %>
-        <li> <%= students[i] %> </li>
-      <% } %>
-    </ul>
+    <!-- <ul>
+      <%// for (var i = 0; i < students.length; i++) { %>
+        <li> <%=// students[i] %> </li>
+      <%// } %>
+    </ul> -->
 
     <ul>
-      <% students.forEach((student) => { %>
-        <!-- <li><%=// student %></li> -->
-        <% include ./partials/students %>
+      <% articles.forEach((article) => { %>
+        <li><%= article.title %></li>
+        <li><%= article.content %></li>
+        <a href=<%= article.link %>>THIS IS A LINK</a>
+        <!-- <%// include ./partials/students %> -->
       <% }) %>
     </ul>
 

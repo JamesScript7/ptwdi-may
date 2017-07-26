@@ -6,3 +6,8 @@ body {
 .student-item {
   list-style: none;
 }
+
+input {
+  padding: 20px;
+  border: 1px solid black;
+}

@@ -30,9 +30,17 @@ app.use(parser.json());
 
 var data = {
   title: "Form",
-  students: [
-    'PJ',
-    'ANDRE'
+  articles: [
+    {
+      title: "About Article",
+      content: "lkjsfhadsfhoaiusdfhoiweafa",
+      link: "/about"
+    },
+    {
+      title: "2nd Article",
+      content: "uiw3bry73g97rga973rga",
+      link: "/index"
+    }
   ]
 };
 
@@ -45,6 +53,10 @@ app.get('/about', function(req,res){
   // res.send(form({ title: 'Forms' }));
   res.render('about');
 });
+
+app.get('/contact', function(req,res) {
+  res.render('contact');
+})
 
 app.post('/submit', function(req,res) {
   console.log(req.body);
