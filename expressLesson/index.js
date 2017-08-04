@@ -44,6 +44,26 @@ var data = {
   ]
 };
 
+/*
+blog.articles.forEach((article) => {
+  app.get(article.link, (req,res) => {
+    response.render('blog-detail', {
+      article: article,
+      links: blog.article.map(article) => {
+        return {
+          title: article.title,
+          link: article.link
+        }
+      }
+    })
+  });
+});
+*/
+
+//map returns a new object! In this case just title and link.
+//you can add '/' statically.
+//show in header example with a flag.
+
 app.get('/', function(req,res){
   // res.send(form({ title: 'Forms' }));
   res.render('index', data);

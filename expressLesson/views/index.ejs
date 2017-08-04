@@ -31,10 +31,7 @@
 
     <ul>
       <% articles.forEach((article) => { %>
-        <li><%= article.title %></li>
-        <li><%= article.content %></li>
-        <a href=<%= article.link %>>THIS IS A LINK</a>
-        <!-- <%// include ./partials/students %> -->
+        <%- include('./partials/articles', {article}); %>
       <% }) %>
     </ul>
 
